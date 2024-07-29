@@ -152,7 +152,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12 py-5">
-                    <h2><a href="#" class="text-decoration-none text-light"> --> Content goes here <-- </a></h2>
+                    <h2><a href="#" class="text-decoration-none text-light fw-bold"> --> Content goes here <-- </a></h2>
                 </div>
             </div>
         </div>
