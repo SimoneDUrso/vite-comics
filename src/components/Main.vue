@@ -112,6 +112,35 @@ export default {
                     label: "DC Power Visa",
                     url: "#"
                 },
+            ],
+
+            navMain:[
+                {
+                    image: "./src/assets/buy-comics-digital-comics.png",
+                    label: "DIGITAL COMICS",
+                    url: "#"
+                },
+                {
+                    image: "./src/assets/buy-comics-merchandise.png",
+                    label: "DC MERCHANDISE",
+                    url: "#"
+                },
+                {
+                    image: "./src/assets/buy-comics-subscriptions.png",
+                    label: "SUBSCRIPTIONS",
+                    url: "#"
+                },
+                {
+                    image: "./src/assets/buy-comics-shop-locator.png",
+                    label: "COMICS SHOP LOCATOR",
+                    url: "#"
+                },
+                {
+                    image: "./src/assets/buy-dc-power-visa.svg",
+                    label: "DC POWER VISA",
+                    url: "#"
+                },
+                
             ]
 
         }
@@ -129,25 +158,12 @@ export default {
         </div>
 
         <div class="container-full bg-primary blue-section">
-            <div class="row">
-                <div class="col-2 offset-2">
-                    PROVA
-                </div>
-
-                <div class="col-2">
-                    PROVA
-                </div>
-
-                <div class="col-2">
-                    PROVA
-                </div>
-
-                <div class="col-2">
-                    PROVA
-                </div>
-
-                <div class="col-2">
-                    PROVA
+            <div class="row justify-content-center align-items-center">
+                <div class="col-2" v-for="nav, index in navMain">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img :src="nav.image" alt="Immagini">
+                        <span class="ms-2"><a class="text-decoration-none text-white" :href="nav.url">{{ nav.label }}</a></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -215,5 +231,17 @@ export default {
         top: -80px;
         left: 200px;
         width: 1000px;
+    }
+
+    .col-2{
+        width: 13%;
+        span{
+            font-size: 14px;
+        }
+
+        img{
+            width: 50px;
+            height: 65px;
+        }
     }
 </style>
