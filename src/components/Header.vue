@@ -8,7 +8,7 @@ export default {
         <div class="container mt-2">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-between ">
-                    <img src="../assets/dc-logo.png" alt="">
+                    <img src="../assets/dc-logo.png" alt="" class="mb-2">
                     <ul class="list-unstyled d-flex">
                         <li class="px-2"><a class="text-decoration-none text-dark" href="#">CHARACTERS</a></li>
                         <li class="px-2"><a class="active text-decoration-none text-dark" href="#">COMICS</a></li>
@@ -33,9 +33,9 @@ export default {
 
             .active{
                 border-bottom: 5px solid rgb(12, 124, 236);
-                padding-bottom: 20px;
+                padding-bottom: 50px;
             }
         }
-
     }
+    
 </style>
