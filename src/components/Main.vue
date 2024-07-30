@@ -2,10 +2,12 @@
 import { dc_comics, shops, dc, sites, navMain } from '../data/menuLists';
 import Hero from './partials/Hero.vue';
 import comics from '../data/comicsList';
+import CardSection from './partials/CardSection.vue';
 
 export default {
     components:{
-        Hero
+        Hero,
+        CardSection
     },
 
     data(){
@@ -21,15 +23,21 @@ export default {
 }
 </script>
 <template>
-    <main class="bg-dark">
+    <main class="bg-dark position-relative">
         <Hero />
-        <div class="container">
+        <div class="btn-current-series">
+            <button class="btn btn-primary fs-5 fw-bold">CURRENT SERIES</button>
+        </div>
+        <div class="container d-flex flex-column align-items-center justify-content-between">
             <div class="row">
-                    <comicsList 
-                        v-for="thumb, index in comics" 
-                        :key="index" 
-                        :type="thumb"
-                    />
+                <CardSection
+                    v-for="comic, index in comics" 
+                    :key="`t-${index}`" 
+                    :comic="comic"
+                />
+            </div>
+            <div class="mt-5">
+                <button class="btn btn-sm btn-primary fs-6 mt-4 fw-bold">LOAD MORE</button>
             </div>
         </div>
 
@@ -90,8 +98,26 @@ export default {
     </main>
 </template>
 <style lang="scss" scoped>
+.btn-current-series{
+    position: absolute;
+    left: 16%;
+    top: 370px;
+
+    button{
+        padding: 15px 50px;
+    }
+}
+
+.container{
+    padding: 30px 0px 0px 0px;
+
+    button{
+        padding: 5px 100px;
+    }
+}
     .blue-section{
         padding: 60px 0px;
+        margin-top: 10px;
         position: relative;
         z-index: 50;
         overflow-x: hidden;
