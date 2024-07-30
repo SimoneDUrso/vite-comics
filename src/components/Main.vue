@@ -242,6 +242,7 @@ export default {
         img{
             width: 50px;
             height: 65px;
+            object-fit: contain;
         }
     }
 </style>
