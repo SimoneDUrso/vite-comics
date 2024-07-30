@@ -1,29 +1,10 @@
 <script>
+import { icons } from '../data/menuLists';
+
 export default {
     data(){
         return{
-            icons:[
-                {
-                    image: "./src/assets/footer-facebook.png",
-                    url: "#"
-                },
-                {
-                    image: "./src/assets/footer-twitter.png",
-                    url: "#"
-                },
-                {
-                    image: "./src/assets/footer-youtube.png",
-                    url: "#"
-                },
-                {
-                    image: "./src/assets/footer-pinterest.png",
-                    url: "#"
-                },
-                {
-                    image: "./src/assets/footer-periscope.png",
-                    url: "#"
-                },
-            ]
+            icons
         }
     }
 }
