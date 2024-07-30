@@ -1,6 +1,7 @@
 <script>
 import { dc_comics, shops, dc, sites, navMain } from '../data/menuLists';
 import Hero from './partials/Hero.vue';
+import comics from '../data/comicsList';
 
 export default {
     components:{
@@ -14,7 +15,7 @@ export default {
             dc,
             sites,
             navMain,
-            
+            comics,
         }
     }
 }
@@ -24,9 +25,11 @@ export default {
         <Hero />
         <div class="container">
             <div class="row">
-                <div class="col-12 py-5">
-                    <h2><a href="#" class="text-decoration-none text-light fw-bold"> --> Content goes here <-- </a></h2>
-                </div>
+                    <comicsList 
+                        v-for="thumb, index in comics" 
+                        :key="index" 
+                        :type="thumb"
+                    />
             </div>
         </div>
 
