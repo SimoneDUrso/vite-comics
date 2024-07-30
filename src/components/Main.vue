@@ -1,19 +1,27 @@
 <script>
 import { dc_comics, shops, dc, sites, navMain } from '../data/menuLists';
+import Hero from './partials/Hero.vue';
+
 export default {
+    components:{
+        Hero
+    },
+
     data(){
         return{
             dc_comics,
             shops,
             dc,
             sites,
-            navMain
+            navMain,
+            
         }
     }
 }
 </script>
 <template>
     <main class="bg-dark">
+        <Hero />
         <div class="container">
             <div class="row">
                 <div class="col-12 py-5">
