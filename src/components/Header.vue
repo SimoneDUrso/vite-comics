@@ -29,6 +29,7 @@ export default {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             a{
                 color: black;
+                transition: color 0.2s ease;
 
                 &:hover{
                     color: rgb(12, 124, 236);

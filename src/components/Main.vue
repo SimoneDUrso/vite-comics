@@ -61,12 +61,12 @@ export default {
                             <div class="me-4">
                                     <h4 class="text-white">DC COMICS</h4>
                                 <ul class="list-unstyled">
-                                    <li v-for="comic, index in dc_comics"><a class="text-decoration-none text-secondary" :href="comic.url">{{ comic.label }}</a></li>
+                                    <li v-for="comic, index in dc_comics"><a class="text-decoration-none" :href="comic.url">{{ comic.label }}</a></li>
                                 </ul>
     
                                 <h4 class="text-white">SHOP</h4>
                                 <ul class="list-unstyled">
-                                    <li v-for="shop, index in shops"><a class="text-decoration-none text-secondary" :href="shop.url">{{shop.label}}</a></li>
+                                    <li v-for="shop, index in shops"><a class="text-decoration-none" :href="shop.url">{{shop.label}}</a></li>
                                 </ul>
                             </div>
     
@@ -74,14 +74,14 @@ export default {
                                 <h4 class="text-white">DC</h4>
                                 
                                 <ul class="list-unstyled">
-                                    <li v-for="dc, index in dc"><a class="text-decoration-none text-secondary" href="dc.url">{{dc.label}}</a></li>
+                                    <li v-for="dc, index in dc"><a class="text-decoration-none" href="dc.url">{{dc.label}}</a></li>
                                 </ul>
                             </div>
     
                             <div class="mx-4">
                                 <h4 class="text-white">SITES</h4>
                                 <ul class="list-unstyled">
-                                    <li v-for="site, index in sites"><a class="text-decoration-none text-secondary" href="site.url">{{site.label}}</a></li>
+                                    <li v-for="site, index in sites"><a class="text-decoration-none" href="site.url">{{site.label}}</a></li>
                                 </ul>
                             </div>
     
@@ -99,9 +99,9 @@ export default {
 </template>
 <style lang="scss" scoped>
 .btn-current-series{
-    position: absolute;
+    position: relative;
     left: 16%;
-    top: 370px;
+    top: -30px;
 
     button{
         padding: 15px 50px;
@@ -121,12 +121,29 @@ export default {
         position: relative;
         z-index: 50;
         overflow-x: hidden;
+        
+        a{
+            transition: opacity 0.3s ease;
+
+            &:hover{
+                opacity: 0.5;
+            }
+        }
     }
 
     .bg-image{
         background-image: url(../assets/footer-bg.jpg);
         background-size: cover;
         min-height: 460px;
+
+        a{
+            color: rgb(141, 140, 140);
+            transition: color 0.2s ease;
+
+            &:hover{
+                color: white;
+            }
+        }
     }
 
     .dc-logo-bg{
